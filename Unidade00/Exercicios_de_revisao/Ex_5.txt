@@ -1,0 +1,13 @@
+• O que o programa abaixo mostra na tela?
+
+---------------------------------------------------------------
+
+byte b = 0; short s = 0; int i = 0; long l = 0;
+while (true){
+ b++; s++; i++; l++;
+ System.out.println(b + “ ” + s + “ ” + i + “ ” + l);
+}
+
+---------------------------------------------------------------
+
+O programa vai aumentar 1 no valor de cada variável a cada iteração do loop e imprimir os valores atualizados na tela. Porém, como o loop é infinito, ele continuará a fazer isso até que seja interrompido manualmente.

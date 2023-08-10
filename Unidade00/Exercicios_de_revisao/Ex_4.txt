@@ -1,0 +1,16 @@
+• Qual é a diferença entre os dois métodos abaixo?
+
+-----------------------------------------------------------------
+
+int m1(int i){
+return i--;
+}
+int m2(int i){
+return --i;
+}
+
+-----------------------------------------------------------------
+
+m1 -> Neste método, o operador de decremento i-- é usado. Isso significa que o valor de i é retornado primeiro (antes de ser decrementado).
+
+m2 -> Neste método, o operador de decremento pré-fixo --i é utilizado. Isso significa que i é decrementado em uma unidade primeiro e, em seguida, o valor decrementado é retornado.

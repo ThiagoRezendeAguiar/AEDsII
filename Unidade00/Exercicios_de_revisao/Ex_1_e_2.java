@@ -4,7 +4,7 @@
 */
 package Unidade00.Exercicios_de_revisao;
 
-public class Ex {
+public class Ex_1_e_2 {
     public static void main(String[] args) throws Exception {
         int[] array = { 1, 2, 3, 4, 5 };
         int num = 3;
