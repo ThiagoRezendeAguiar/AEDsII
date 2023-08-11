@@ -1,0 +1,26 @@
+• Seja a classe Lixão abaixo e a Funcionário do exemplo anterior, faça o quadro de memória para o código abaixo.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+class Lixao{
+    public static void main(String[] args){
+        Funcionario f1;
+        f1 = new Funcionario();
+        f1 = new Funcionario(5);
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+Memória:
+
+Endereço de Memória   | Conteúdo
+----------------------------------------------------
+0                     | Ponteiro para o objeto f1 (Endreço: 4)
+1                     | Ponteiro para o objeto f2 (Endereço: 5)
+2                     | 
+3                     |
+4                     | Objeto Funcionario(0, "") 
+5                     | Objeto Funcionario(5, "") 
+...
