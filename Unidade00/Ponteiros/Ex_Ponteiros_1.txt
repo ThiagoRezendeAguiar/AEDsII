@@ -1,0 +1,21 @@
+• O que significa cada um dos trechos de código abaixo?
+
+--------------------------------------------------------------------------------
+
+int [ ] vet
+
+Criação de um ponteiro chamado vet.
+
+--------------------------------------------------------------------------------
+
+= new int [5]
+
+São alocados 5 espaços de memória para o armazenamento de números inteiros.
+
+--------------------------------------------------------------------------------
+
+int [ ] vet = new int [5];
+
+O ponteiro recebe o endereço da área da memória alocada.
+
+--------------------------------------------------------------------------------

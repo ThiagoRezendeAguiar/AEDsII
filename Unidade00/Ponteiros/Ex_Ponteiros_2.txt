@@ -1,0 +1,18 @@
+• Explique o que o programa abaixo imprime na tela
+
+-----------------------------------------------------------------------------------------------------------
+
+class Ponteiro01Array {
+    public static void main (String[] args) {
+       int[] vet = new int [5];
+       escrever(vet);
+       vet = new int [5];
+       escrever(vet);
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------
+
+    O programa cria um array de inteiros e chama uma função "escrever" para imprimir seus valores na tela. 
+Em seguida, recria o array, chama a função novamente e imprime os valores do novo array. Portanto, a saída 
+consistirá na impressão dos elementos de ambos os arrays.
