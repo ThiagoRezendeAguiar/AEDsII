@@ -3,7 +3,7 @@ Faça também uma classe Lixao contendo um método main sendo que esse terá doi
 */
 package Unidade00.Introdução_OO;
 
-public class Lixao {
+public class LixaoRetangulo {
     public static void main(String[] args){
         Retangulo ret1 = new Retangulo(5,4);
         Retangulo ret2 = new Retangulo();

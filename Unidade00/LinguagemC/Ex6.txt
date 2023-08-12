@@ -1,0 +1,13 @@
+• Crie um registro célula contendo os atributos elemento (inteiro) e prox (apontador para outra célula).
+
+typedef struct Celula {
+    int elemento;
+    struct Celula *prox;
+} Celula;
+
+--------------------------------------------------------------------------------------------------------------------
+
+• Mostre o que acontece se um método tiver o comando Celula *tmp = novaCelula(3). 
+
+tpm -> Celula: elemento = 3
+               prox -> null
