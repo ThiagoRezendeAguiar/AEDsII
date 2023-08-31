@@ -9,7 +9,7 @@ class TP01Q04{
     
     for(int i = 0; i < n; i++){
       if(texto.charAt(i) == caracter){
-        aleatorio += caracter;
+        aleatorio += caracterTrocar;
       }
       else{
          aleatorio += texto.charAt(i);
