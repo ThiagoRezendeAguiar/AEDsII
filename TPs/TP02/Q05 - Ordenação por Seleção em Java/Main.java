@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,9 +15,8 @@ public class Main {
             BufferedReader br = null;
 
             //Criar vetor de jogadores
-            Jogador[] jogadores = new Jogador[463];
+            ArrayList<Jogador> jogadores = new ArrayList<>();
 
-            int k = 0;
             String id = in.nextLine();
 
             // Pegar os Ids de entrada
@@ -29,9 +29,9 @@ public class Main {
                 // Preencher o vetor de jogadores
                 while ((linha = br.readLine()) != null) {
                     if (linhaAtual == linhaDesejada) { 
-                        jogadores[k] = new Jogador();
-                        jogadores[k].ler(linha);
-                        k++;
+                        Jogador jogador = new Jogador();
+                        jogador.ler(linha); 
+                        jogadores.add(jogador);
                         break;
                     }
 
@@ -47,8 +47,8 @@ public class Main {
             sort(jogadores);
             int c = sort(jogadores);
 
-            for(int i = 0; i < jogadores.length; i++){
-                jogadores[i].imprimir();
+            for(int i = 0; i < jogadores.size(); i++){
+                jogadores.get(i).imprimir();
             }
             
             long end = System.currentTimeMillis();
@@ -58,21 +58,21 @@ public class Main {
         }
     }
 
-    public static int sort(Jogador[] jogadores){
+    public static int sort(ArrayList<Jogador> jogadores){
       Jogador aux = null;
       int c = 0;
 
-      for(int i = 0; i < jogadores.length  - 1; i++){
+      for(int i = 0; i < jogadores.size()  - 1; i++){
         int menor = i;
-        for(int j = i + 1; j < jogadores.length; j++){
-            if(jogadores[j].getNome().compareTo(jogadores[menor].getNome()) < 0){
+        for(int j = i + 1; j < jogadores.size(); j++){
+            if(jogadores.get(j).getNome().compareTo(jogadores.get(menor).getNome()) < 0){
                 menor = j;
             }
             c ++;
         }
-        aux = jogadores[menor];
-        jogadores[menor] = jogadores[i];
-        jogadores[i] = aux;
+        aux = jogadores.get(menor);
+        jogadores.set(menor, jogadores.get(i));
+        jogadores.set(i, aux);
       }
 
       return  c;

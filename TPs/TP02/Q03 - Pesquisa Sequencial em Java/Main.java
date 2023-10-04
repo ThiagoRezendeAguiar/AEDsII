@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,9 +16,8 @@ public class Main {
             BufferedReader br = null;
 
             // Criar vetor de jogadores
-            Jogador[] jogadores = new Jogador[49];
+            ArrayList<Jogador> jogadores = new ArrayList<>();
 
-            int k = 0;
             String id = in.nextLine();
 
             // Pegar os Ids de entrada e preencher o vetor de jogadores
@@ -29,9 +29,9 @@ public class Main {
 
                 while ((linha = br.readLine()) != null) {
                     if (linhaAtual == linhaDesejada) {
-                        jogadores[k] = new Jogador();
-                        jogadores[k].ler(linha);
-                        k++;
+                        Jogador jogador = new Jogador();
+                        jogador.ler(linha); 
+                        jogadores.add(jogador);
                         break;
                     }
 
@@ -53,7 +53,7 @@ public class Main {
                     System.out.println("NAO");
                 }
 
-                c += jogadores.length;
+                c += jogadores.size();
 
                 nome = in.nextLine();
             }
@@ -67,12 +67,12 @@ public class Main {
         }
     }
 
-    public static boolean search(String nome, Jogador[] jogadores) {
+    public static boolean search(String nome, ArrayList<Jogador> jogadores) {
         boolean resp = false;
-        for (int i = 0; i < jogadores.length; i++) {
-            if (jogadores[i].getNome().equals(nome)) {
+        for (int i = 0; i < jogadores.size(); i++) {
+            if (jogadores.get(i).getNome().equals(nome)) {
                 resp = true;
-                i = jogadores.length;
+                i = jogadores.size();
             }
         }
         return resp;

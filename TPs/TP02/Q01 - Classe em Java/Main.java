@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,8 +10,7 @@ public class Main {
             Scanner in = new Scanner(System.in);
             BufferedReader br = null;
 
-            Jogador[] jogadores = new Jogador[40];
-            int k = 0;
+            ArrayList<Jogador> jogadores = new ArrayList<>();
             String id = in.nextLine();
 
             while (!isFim(id)) {
@@ -21,10 +21,10 @@ public class Main {
 
                 while ((linha = br.readLine()) != null) {
                     if (linhaAtual == linhaDesejada) {
-                        jogadores[k] = new Jogador();
-                        jogadores[k].ler(linha);
-                        jogadores[k].imprimir();
-                        k++;
+                        Jogador jogador = new Jogador();
+                        jogador.ler(linha);
+                        jogadores.add(jogador);
+                        jogador.imprimir();
                         break;
                     }
 
