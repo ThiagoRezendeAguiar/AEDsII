@@ -30,7 +30,11 @@ public class Main {
                 while ((linha = br.readLine()) != null) {
                     if (linhaAtual == linhaDesejada) {
                         Jogador jogador = new Jogador();
+<<<<<<< HEAD
                         jogador.ler(linha); 
+=======
+                        jogador.ler(linha);
+>>>>>>> cdcff6d26ef0d403160a22ebfb83f4f2a4273367
                         jogadores.add(jogador);
                         break;
                     }

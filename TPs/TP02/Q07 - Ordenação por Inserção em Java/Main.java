@@ -30,7 +30,11 @@ public class Main {
                 while ((linha = br.readLine()) != null) {
                     if (linhaAtual == linhaDesejada) {
                         Jogador jogador = new Jogador();
+<<<<<<< HEAD
                         jogador.ler(linha); 
+=======
+                        jogador.ler(linha);
+>>>>>>> cdcff6d26ef0d403160a22ebfb83f4f2a4273367
                         jogadores.add(jogador);
                         break;
                     }
@@ -65,7 +69,11 @@ public class Main {
 
             int j = i - 1;
             while ((j >= 0) && ((jogadores.get(j).getAnoNascimento() > aux.getAnoNascimento()) || (jogadores.get(j).getAnoNascimento() == aux.getAnoNascimento() && jogadores.get(j).getNome().compareTo(aux.getNome()) > 0))) {
+<<<<<<< HEAD
                 jogadores.set(j + 1, jogadores.get(j));
+=======
+                jogadores.set(j + 1 , jogadores.get(j));
+>>>>>>> cdcff6d26ef0d403160a22ebfb83f4f2a4273367
                 j--;
                 c += 2;
             }
